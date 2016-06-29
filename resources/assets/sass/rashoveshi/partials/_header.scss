@@ -1,0 +1,56 @@
+.header, .title-bar{
+background:url('../../images/back-pattern.png') $green-light;
+}
+.top-menu-bar li{
+
+@media only screen and (max-width: $ipad-pw) {
+width:100%; 
+display:list-item;
+padding: 6px 0px;
+}
+a{
+color:#ddd;
+}
+}
+.top-menu-bar li a:hover, .top-menu-bar li a:focus{
+color:#fff;
+}
+.top-bar{
+padding:0px;
+
+}
+.shrink .top-bar{
+padding: 0.5rem;
+}
+.menu > li {
+@media only screen and (max-width: $ipad-pw) {
+width:100%; 
+display:list-item;
+padding: 6px 0px;
+}
+}
+.mobilefixed{
+position:absolute;
+width:100%;
+top:0px;
+}
+.mobile-logo{
+width:40px;
+}
+.menu-wrapp{
+@media screen and (min-width: $desktops) {
+width:	61em;
+margin:0 auto;
+}
+}
+.report-bar{
+background: #FFF;
+padding: 5px;
+font-family: 'MV Waheed';
+color: #15822E;
+opacity: 0.90;
+margin-bottom:10px;
+@media only screen and (max-width: $ipad-pw) {
+text-align:center;
+}
+}

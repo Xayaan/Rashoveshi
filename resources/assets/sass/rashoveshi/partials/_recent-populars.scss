@@ -1,0 +1,67 @@
+.recents-popular {
+@media screen and (max-width: $ipad-pw) {
+padding-left:15px;
+}
+.tabs-panel{
+padding:0px;
+margin:0px;
+ul{ 
+padding: 0px;
+margin: 0px;
+list-style: none;
+
+li{
+border-bottom: 1px solid #eee;
+padding: 10px 15px;
+
+&:hover{
+border-right: 2px solid $green-light;
+a{
+color: $green-light;
+}
+}
+
+a{
+color: #333;
+&:hover{
+color: $green-light;
+}
+}
+
+}
+}
+}
+
+.tabs{
+.tab-title {
+}
+.is-active{
+a {
+padding: 10px 0px;
+border-bottom: 0px;
+border-top: 2px solid $green-light;
+background-color:#fff;
+}
+}
+} 
+
+}
+
+.tabs-title{
+width: 50%;
+text-align: center;
+padding: 0px;
+}
+
+.tabs .tabs-title > a{
+border-bottom: 0px;
+border-top: 2px solid $green-light;
+padding: 10px 0px;
+border: 1px solid #eee;
+color: #222222;
+font-size: 1rem;
+}
+
+.tabs{
+border-bottom:0px; 
+}

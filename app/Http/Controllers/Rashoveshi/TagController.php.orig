@@ -1,0 +1,66 @@
+<?php
+
+namespace App\Http\Controllers\Rashoveshi;
+
+use App\Http\Controllers\Controller;
+<<<<<<< HEAD
+
+class TagController extends Controller {
+
+	public function __contruct() {
+
+	}
+
+	public function index($tagname) {
+		return $tagname;
+	}
+=======
+use App\Post;
+use App\Tag;
+
+class TagController extends Controller {
+
+	protected $tags;
+
+	protected $posts;
+
+	public function __construct(Tag $tags, Post $posts) {
+		$this->tags = $tags;
+		$this->posts = $posts;
+	}
+
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return \Illuminate\Http\Response
+	 */
+	public function index($tag) {
+		$posts = array('posts' => null);
+
+		if ($tag == 'gallery') {
+			return view('rashoveshi.pages.gallery');
+		}
+		$categoriesList = array(
+			'news' => '1',
+			'politics' => '2',
+			'sports' => '3',
+			'business' => '4',
+			'report' => '5',
+			'people' => '6',
+			'environment' => '7',
+			'history' => '8',
+			'school' => '9',
+			'school' => '9',
+		);
+		$id = array_pull($categoriesList, $tag);
+
+		$posts['posts'] = $this->posts->PostsByTag($id, $take = 3, $featured = 1);
+
+		$recentPosts = $this->posts->where('tag', '!=', '15')->where('tag', '!=', '11')->NotFeatured()->multi('published')->take(6)->get();
+		// return $posts;
+		return view('rashoveshi.pages.category', compact('posts', 'recentPosts'));
+
+	}
+
+>>>>>>> ed38660cf9019c5c4f30563106e5b84c03f6eb3d
+}

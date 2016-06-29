@@ -1,0 +1,90 @@
+.top-menu-bar{
+background-color:$green-dark;
+}
+
+.menu .menu-text{
+display:none;
+}
+.shrink{
+position:fixed;
+top:0px;
+left:0px;
+width:100%;
+}
+.shrink .menu .menu-text{
+display:table-cell;
+padding:0px;
+}
+.top-menu-bar.shrink{
+background-color: #fff;
+border-bottom:3px solid $green-light; 
+z-index:999;
+}
+.shrink .top-bar, .shrink .top-bar ul{
+background-color: #fff;
+}
+.shrink .menu > li > a{
+color:#333;
+padding: 0.2rem 1rem;
+
+
+}
+.shrink .menu > li > a:hover{
+color:$green-light; 
+}
+.top-bar, .top-bar ul {
+background-color:$green-dark;
+}
+.top-bar input{
+font-size:12px;
+margin:5px 0px;
+height:auto;
+padding:5px 8px; 
+background-color:$green-light;
+border:none;
+}
+.shrink .top-bar input{
+background-color:#fff;
+}
+.menu ::-webkit-input-placeholder {
+color: #fff;
+}
+
+.menu :-moz-placeholder {
+color: #fff;  
+}
+
+.menu ::-moz-placeholder {  
+color: #fff;  
+}
+
+.menu :-ms-input-placeholder {  
+color: #fff;  
+}
+.shrink ::-webkit-input-placeholder {
+color: #ddd;
+}
+
+.shrink :-moz-placeholder {
+color: #ddd;  
+}
+
+.shrink ::-moz-placeholder {  
+color: #ddd;  
+}
+
+.shrink :-ms-input-placeholder {  
+color: #ddd;  
+}
+.top-bar input{
+width:170px !important;
+}
+.top-bar-right{
+li{
+font-size: 1.1em;
+}
+}
+
+.top-bar a{
+	font-family: 'MV Waheed';
+}

@@ -1,0 +1,27 @@
+.photos h3 {
+font-size: 1em;
+border-top: 2px solid $green-light;
+border-bottom: 1px solid #eee;
+color: #555;
+padding: 5px;
+margin: 0px;
+background-color:#fff;
+}
+.galleries-wrap .section-title{
+font-size: 1em;
+border-top: 2px solid $green-light;
+border-bottom: 1px solid #eee;
+color: #555;
+padding: 5px;
+margin:20px 0px -10px 30px;
+background-color:#fff;
+@media screen and (max-width: $ipad-pw){
+margin:20px 12px 0px 12px;
+}
+i {
+color: #21ba45;
+}
+}
+.small-centered{
+padding:0 12px;
+}

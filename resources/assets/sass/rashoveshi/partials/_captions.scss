@@ -1,0 +1,19 @@
+.pic-caption {
+	background-color: #eee;
+	padding: 5px 10px;
+	a{
+		font-size: 14px;
+	padding: 0px;
+	margin: 0px;
+	color: #777;
+	}
+}
+
+
+figcaption.orbit-caption{
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 );
+	padding: 2rem 0.875rem 0.625rem 0.875rem;
+}

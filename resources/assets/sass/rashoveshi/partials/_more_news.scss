@@ -1,0 +1,39 @@
+.more-news{
+@media screen and (max-width: $ipad-pw) {
+padding-left:0px;
+}
+border-left:1px solid #ddd;
+time{
+font-size:0.8em;
+}
+}
+.more-news ul {
+list-style: none;
+padding: 0px;
+margin: 0px;
+}
+.more-news-block .block-img-wrap {
+height: 150px;
+width: 100%;
+overflow: hidden;
+background-size: cover;
+}
+.more-news-block:hover h4 {
+color: $green-light;
+}
+.more-news-block h4 {
+font-size: 18px;
+margin-bottom:0px;
+padding-bottom:0px;
+}
+.more-news ul li {
+border-bottom: 1px solid #eee;
+padding-bottom: 6px;
+margin-bottom: 6px;
+}
+.more-news-block {
+height: 240px;
+@media screen and (max-width: $ipad-pw) {
+padding:10px 15px 0px 15px;
+}
+}

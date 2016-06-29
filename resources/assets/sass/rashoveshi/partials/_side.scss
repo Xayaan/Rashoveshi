@@ -1,0 +1,33 @@
+.latest-side{
+	 h3 {
+		font-size: 20px;
+		border-top: 2px solid $green-light;
+		border-bottom: 1px solid #eee;
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+		color: #555;
+		padding: 5px 10px;
+		margin: 0px;
+	}
+	
+	ul {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+	}
+}
+
+.post-sidemeta {
+	margin-bottom: 20px;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	h3 {
+		border-top: 3px solid $green-light;
+		border-bottom: 1px solid #eee;
+		color: #555;
+		padding: 5px 10px;
+		font-size: 20px;
+	}
+}
+
+

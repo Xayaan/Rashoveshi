@@ -1,0 +1,65 @@
+
+*{
+font-family: 'MV Faseyha';
+outline: none;
+}
+body{
+position:relative;
+-webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+}
+.clearfix{
+clear:both;
+}
+.nopadding{
+padding: 0px;
+}
+
+.nopadding-right{
+padding-right: 0px;
+}
+
+.nopadding-left{
+padding-left: 0px;
+}
+.clearfix{
+clear: both !important;
+}
+h1, h2, h3, h4, h5 ,h6, nav section ul li a ,  nav ul li, .tabs dd > a, .tabs .tabs-title > a , button, .button{
+font-family: 'MV Waheed';
+font-weight: 400;
+color: #222222;
+}	
+
+.main-area {
+margin: 0px auto 10px auto;
+padding-top: 30px;
+background-color: #eee;
+@media only screen and (max-width: $ipad-pw) {
+padding-top: 0px;
+}
+}
+
+.atk{
+font-family: "MV Waheed";
+direction: rtl;
+}
+abbr[title]{
+font-size:0.8em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

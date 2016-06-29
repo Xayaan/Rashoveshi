@@ -1,0 +1,30 @@
+.noround{
+  border-radius: 0px !important;
+}
+
+.nomargin{
+  margin: 0px !important;
+  &-bottom{
+    margin: 0px !important;
+  }
+}
+
+.secondary{
+  min-height: 1.857143em !important;
+  .item{
+    font-size: 0.8rem !important;
+  }
+}
+
+.ui.message{
+	margin-bottom:40px;
+}
+
+
+.tags-form{
+  .ui.image{
+    margin-right:5px !important;
+    max-height:15px !important;
+  }
+}
+

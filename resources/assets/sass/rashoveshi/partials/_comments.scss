@@ -1,0 +1,173 @@
+.commentsBar h3 {
+border-top: 3px solid $green-light;
+border-bottom: 1px solid #eee;
+color: #555;
+padding: 5px 10px;
+@media screen and (max-width: $ipad-pw) {
+font-size:0.9em;
+}
+font-size: 20px;
+}
+
+.commentsBar{
+.submit-comment-btn {
+margin-left: 15px;
+padding: 10px 20px !important;
+background-color: $green-light;
+color:#fff;
+@media screen and (max-width: $ipad-pw) {
+font-size:0.9em;
+}
+font-size:16px;
+font-weight:normal;
+float:left;
+}
+ul{
+list-style:none;
+@media screen and (max-width: $ipad-pw) {
+padding:0px;
+margin:0px;
+}
+}
+.comment-list li{
+padding-top: 10px;
+@media screen and (max-width: $ipad-pw) {
+font-size:0.9em;
+}
+font-size: 14px;
+line-height: 24px;
+border-radius: 5px;
+color: #333333;
+position: relative;
+transition: margin 0.3s;
+transition: opacity 0.3s;
+background: rgba(255, 255, 255, 0.5);
+margin-right: 10px;
+margin-bottom: 10px;
+clear:both;
+width:100%;
+}
+.comment-list li .fa-commenting-o{
+float:right;
+-webkit-border-radius: 9999px;
+border-radius: 9999px;
+width: 25px;
+background-color: $green-dark;
+padding: 5px;
+margin-top: 3px;
+color: $green-light;
+}
+.comment-list li h2{
+font-weight: normal;
+@media screen and (max-width: $ipad-pw) {
+font-size:0.9em;
+}
+font-size: 16px;
+padding: 2px 0px;
+margin-right: 10px;
+color: #757574;
+padding-right: 15px;
+transition: padding 0.1s;
+float:right;
+}
+.comment-list li time{
+float:right;
+padding: 5px 16px 1px;
+margin-right: 20px;
+margin-top: 2px;
+line-height: 15px;
+border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+.comment-list li .meta .reactions .positive, .comment-list li .meta .reactions .negative {
+padding: 8px 5px;
+cursor: pointer;
+}
+.comment-list li .meta .reply {
+padding: 8px 5px;
+cursor: pointer;
+}
+.comment-list li .meta .reply i {
+margin-top: 2px;
+margin-right: 5px;
+}
+.comment-list li .meta .reply:hover span:nth-child(2) {
+width: 40px;
+}
+.comment-list li p{
+width:100%;
+clear:both;
+border-top:1px solid #eee;
+border-bottom:1px solid #eee;
+padding:10px 0px;
+@media screen and (max-width: $ipad-pw) {
+font-size:0.9em;
+}
+font-size:1.2em;
+margin-bottom:0px;
+}
+.comment-list li .positive,.comment-list li .negetive{
+float:right;
+width:50px;
+}
+.comment-list li .reply{
+float:left;
+}
+.reactions{
+float:right;
+width:60%;
+}
+.positive:hover{
+color:#26A65B;
+}
+.negative:hover{
+color:#D91E18;
+
+}
+}
+
+.comment-list{
+.timeago{
+float: right;
+padding: 5px 16px 1px;
+margin-right: 20px;
+margin-top: 2px;
+line-height: 15px;
+border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
+font-size: 11pt;
+color: #777;
+cursor:none;
+}
+}
+
+.reactions{
+.positive.active{
+color:#26A65B;
+}
+.negative.active{
+color:#D91E18;
+}
+}
+
+.comment-msg{
+background: #4A6F16;
+color: #FFF;
+font-size: 15px;
+text-align: center;
+padding: 10px;
+margin: 16px;
+}
+.atk{
+padding: 0px 5px;
+margin: 0;
+font-family: "MV Waheed";
+direction: rtl;
+font-weight: normal;
+line-height: 1.5;
+color: #333;
+background: #eee;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+.comment-form .large-12{
+margin:10px 0px;
+}

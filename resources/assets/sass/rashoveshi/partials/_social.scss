@@ -1,0 +1,39 @@
+.social-bar {
+@media screen and (max-width: $ipad-pw) {
+width:70%;
+}
+list-style: none;
+li {	
+float: left;
+padding: 0px 5px 0px 0px;
+a img {
+width: 30px;
+}
+}
+}
+
+
+.sharer {
+margin: 5px;
+}
+.tw, .fb-like {
+float: right;
+}
+.fb{
+float:right;
+}
+.tw{
+margin-right:5px;
+}
+.viberBtn{
+float:right;
+img{
+width:54px;
+margin-top:-6px;
+}
+}
+.article-meta{
+img{
+margin-top:-10px;
+}
+}

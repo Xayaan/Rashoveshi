@@ -1,0 +1,37 @@
+.breaking{
+margin-bottom:20px;
+@media only screen and (max-width: $ipad-pw) {
+margin-top:-10px;
+}
+&-title{
+font-size:16pt;
+background-color:#aa002b;
+color:yellow;
+width:12%;
+float:right;
+padding:10px 20px;
+@media screen and (max-width: $ipad-pw) {
+width: 20%;
+font-size:12pt;
+text-align:center;
+}
+}
+&-content{
+background-color:#C80000;
+color:white;
+width:88%;
+float:right;
+font-size:16pt;
+padding:10px 20px;
+@media screen and (max-width: $ipad-pw) {
+width: 80%;
+font-size:12pt;
+}
+}
+}
+.developing{
+@media screen and (max-width: $ipad-pw) {
+
+padding:10px 12px;
+}	
+}

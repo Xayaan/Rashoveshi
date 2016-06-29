@@ -1,0 +1,21 @@
+.editable{
+	min-height:400px;
+	// border:1px solid #ccc;
+	padding:10px;
+}
+
+.medium-insert-buttons{
+	margin-right:-55px !important; 
+}
+
+.medium-insert-buttons-addons{
+	left:-40px !important;
+}
+
+.medium-editor-insert-plugin .medium-insert-buttons .medium-insert-buttons-show{
+	line-height:35px;
+}
+	
+.medium-editor-insert-plugin .medium-insert-buttons .medium-insert-buttons-addons li a{
+	line-height:35px;
+}

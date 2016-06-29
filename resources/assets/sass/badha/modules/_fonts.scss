@@ -1,0 +1,43 @@
+@charset"utf-8";
+
+@font-face {
+    font-family:"MV Waheed";
+    src: url('../fonts/MV_Waheed.otf') format("opentype");
+}
+@font-face {
+    font-family:"MV Faseyha";
+    src: url('../fonts/MV_Faseyha.otf') format("opentype");
+}
+
+@font-face {
+  font-family:"MV Bodu";
+  src: url('../fonts/MV_Bodu.otf') format("opentype");
+}
+
+
+
+// .thaana{
+// 	font-family: "MV Waheed" !important;
+// }
+
+$waheed: "MV Waheed" !important;
+
+.thaana2{
+  font-family: "MV Faseyha" !important;
+}
+
+.thaana3{
+  font-family: "MV Bodu" !important;
+}
+
+.rtl{
+	text-align:right !important;
+}
+
+.comment-text{
+	font-size: 15px;
+    font-family: "MV Faseyha";
+    line-height: 25px;
+    direction: rtl;
+    text-align: right !important;
+}

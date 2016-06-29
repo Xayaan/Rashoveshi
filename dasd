@@ -1,0 +1,119 @@
+[1mdiff --git a/app/Http/Controllers/PagesController.php b/app/Http/Controllers/PagesController.php[m
+[1mindex ebdff44..4c8cc8f 100644[m
+[1m--- a/app/Http/Controllers/PagesController.php[m
+[1m+++ b/app/Http/Controllers/PagesController.php[m
+[36m@@ -2,30 +2,30 @@[m
+ [m
+ namespace App\Http\Controllers;[m
+ [m
+[31m-use Illuminate\Http\Request;[m
+[31m-use App\Http\Requests;[m
+ use App\Http\Controllers\Controller;[m
+ [m
+[31m-class PagesController extends Controller[m
+[31m-{[m
+[31m-    public function homepage(){[m
+[31m-    	return view('rashoveshi.pages.home');[m
+[31m-    }[m
+[32m+[m[32mclass PagesController extends Controller {[m
+[32m+[m	[32mpublic function homepage() {[m
+[32m+[m		[32mreturn view('rashoveshi.pages.home');[m
+[32m+[m	[32m}[m
+ [m
+[31m-    public function article(){[m
+[31m-    	return view('rashoveshi.pages.article');[m
+[31m-    }[m
+[32m+[m	[32mpublic function article() {[m
+[32m+[m		[32mreturn view('rashoveshi.pages.article');[m
+[32m+[m	[32m}[m
+ [m
+[31m-    public function category(){[m
+[31m-    	return view('rashoveshi.pages.category');[m
+[31m-    }[m
+[31m-    public function gallery(){[m
+[31m-    	return view('rashoveshi.pages.gallery');[m
+[31m-    }[m
+[31m-    public function gallery_detail(){[m
+[31m-        return view('rashoveshi.pages.gallery-detail');[m
+[31m-    }[m
+[31m-    public function results(){[m
+[31m-        return view('rashoveshi.pages.results');[m
+[31m-    }[m
+[32m+[m	[32mpublic function category() {[m
+[32m+[m		[32mreturn 'news';[m
+[32m+[m
+[32m+[m		[32m// return view('rashoveshi.pages.category');[m
+[32m+[m
+[32m+[m	[32m}[m
+[32m+[m	[32mpublic function gallery() {[m
+[32m+[m		[32mreturn view('rashoveshi.pages.gallery');[m
+[32m+[m	[32m}[m
+[32m+[m	[32mpublic function gallery_detail() {[m
+[32m+[m		[32mreturn view('rashoveshi.pages.gallery-detail');[m
+[32m+[m	[32m}[m
+[32m+[m	[32mpublic function results() {[m
+[32m+[m		[32mreturn view('rashoveshi.pages.results');[m
+[32m+[m	[32m}[m
+ }[m
+[1mdiff --git a/app/Http/routes.php b/app/Http/routes.php[m
+[1mindex 38fd321..524a189 100644[m
+[1m--- a/app/Http/routes.php[m
+[1m+++ b/app/Http/routes.php[m
+[36m@@ -23,8 +23,8 @@[m [mRoute::group(['domain' => 'badha.rashoveshi.dev', 'namespace' => 'Badha'], funct[m
+ 			Route::post('/', ['as' => 'user.update', 'uses' => 'UsersController@update']);[m
+ 			Route::delete('/', ['as' => 'user.delete', 'uses' => 'UsersController@delete']);[m
+ [m
+[31m-			Route::get('deactivate', ['as' => 'user.deactivate', 'uses' => 'ActivationsController@deactivate']);[m
+[31m-			Route::get('reactivate', ['as' => 'user.reactivate', 'uses' => 'ActivationsController@reactivate']);[m
+[32m+[m			[32m// Route::get('deactivate', ['as' => 'user.deactivate', 'uses' => 'ActivationsController@deactivate']);[m
+[32m+[m			[32m// Route::get('reactivate', ['as' => 'user.reactivate', 'uses' => 'ActivationsController@reactivate']);[m
+ 		});[m
+ [m
+ 	});[m
+[36m@@ -161,16 +161,18 @@[m [mRoute::group(['domain' => 'badha.rashoveshi.dev', 'namespace' => 'Badha'], funct[m
+ 	Route::post('upload', 'UploadController@upload');[m
+ });[m
+ [m
+[31m-Route::group(['domain' => 'rashoveshi.dev', 'namespace' => 'Rashoveshi'], function () {[m
+[32m+[m[32mRoute::group(['namespace' => 'Rashoveshi'], function () {[m
+[32m+[m	[32mRoute::pattern('id', '[0-9]+');[m
+ [m
+[31m-	Route::get('/{id}', ['as' => 'page.article', 'uses' => 'PostController@article']);[m
+ 	Route::get('embed', 'PostController@embed');[m
+ 	Route::post('/comments', 'CommentController@store');[m
+ 	Route::post('/comments/reaction', 'CommentController@react');[m
+[32m+[m
+ 	Route::get('/', ['as' => 'page.home', 'uses' => 'HomeController@index']);[m
+[32m+[m	[32mRoute::get('/{id}', ['as' => 'page.article', 'uses' => 'PostController@article']);[m
+[32m+[m	[32mRoute::get('/{tag}', ['as' => 'page.tag', 'uses' => 'TagController@index']);[m
+ [m
+ });[m
+[31m-Route::get('/category', ['as' => 'page.category', 'uses' => 'PagesController@category']);[m
+ Route::get('/results', ['as' => 'page.results', 'uses' => 'PagesController@results']);[m
+ Route::get('/gallery', ['as' => 'page.gallery', 'uses' => 'PagesController@gallery']);[m
+ Route::get('/gallery/view', ['as' => 'page.gallery-detail', 'uses' => 'PagesController@gallery_detail']);[m
+\ No newline at end of file[m
+[1mdiff --git a/app/Post.php b/app/Post.php[m
+[1mindex 08dfad5..4affedc 100644[m
+[1m--- a/app/Post.php[m
+[1m+++ b/app/Post.php[m
+[36m@@ -5,6 +5,7 @@[m [muse App\Layout;[m
+ use Illuminate\Database\Eloquent\Model;[m
+ [m
+ class Post extends Model {[m
+[32m+[m
+ 	protected $table = 'posts';[m
+ [m
+ 	protected $fillable = [[m
+[1mdiff --git a/app/Providers/RouteServiceProvider.php b/app/Providers/RouteServiceProvider.php[m
+[1mindex eb289e3..e476ad8 100644[m
+[1m--- a/app/Providers/RouteServiceProvider.php[m
+[1m+++ b/app/Providers/RouteServiceProvider.php[m
+[36m@@ -22,6 +22,7 @@[m [mclass RouteServiceProvider extends ServiceProvider {[m
+ 	 * @return void[m
+ 	 */[m
+ 	public function boot(Router $router) {[m
+[32m+[m		[32m//[m
+ 		$router->pattern('id', '[0-9]+');[m
+ 		$router->pattern('pattern', '[a-z]{1}[a-z0-9\-]*/i');[m
+ 		parent::boot($router);[m

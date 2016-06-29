@@ -1,0 +1,86 @@
+.live{
+&-header{
+position:relative;
+height:300px;
+background-size:clip;
+h3{
+color:#fff;
+}
+
+}
+&-overlayer{
+position:absolute;
+top:0;
+left:0;
+background:#CF000F;
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+filter: alpha(opacity=80);
+-moz-opacity: 0.8;
+-khtml-opacity: 0.8;
+opacity: 0.8;
+height:100%;
+width:100%;
+}
+.header-overlay{
+position:absolute;
+top:0;
+left:0;
+height:100%;
+width:100%;
+}
+
+.livelogo{
+padding:5% 0;
+}
+.titlewrap{
+margin:6% 0;
+padding:5%;
+border-right:1px solid #eee;
+h2{
+color:#fff;
+}
+}
+&-logo{
+width:100px;
+margin-top:28px;
+}
+&-feed{
+background-color:#fff;
+padding:15px;
+h1{
+font-size:2em;
+}
+}
+.news-block{
+text-align:justify;
+border-bottom:1px solid #eee;
+line-height:35px;
+margin-bottom:10px;
+img{
+width:100%;
+}
+.embbedtweet{
+text-align: center;
+padding-right: 60px;
+}
+.embbedfacebook{
+text-align: center;
+padding: 20px 0;
+}
+.meta{
+background-color:#CF000F;
+color:#fff;
+padding:5px 10px;
+}
+}
+.summary{
+margin:15px 0px;
+h2{
+font-size:1.5em;
+}
+&-inner{
+background-color:#fff;
+padding:10px;
+}
+}
+}

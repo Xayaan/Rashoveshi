@@ -1,0 +1,28 @@
+{
+  "name": "thaanaKeyboard",
+  "version": "1.4.0",
+  "homepage": "https://github.com/ajaaibu/thaanaKeyboard",
+  "authors": [
+    "ajaaibu <ajaaibu@gmail.com>"
+  ],
+  "description": "jQuery Plugin to manipulate thaana keyboard. Supports mobile platforms such as android, ios and all major desktop browsers",
+  "main": "jquery.thaana.js",
+  "dependencies": {
+    "jquery": "~1.11.1"
+  },
+  "keywords": [
+    "Thaana",
+    "Dhivehi",
+    "Keyboard"
+  ],
+  "license": "MIT",
+  "_release": "1.4.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.4.0",
+    "commit": "79b2f8f68264b49711925950d50c9b27f77fe0d5"
+  },
+  "_source": "git://github.com/ajaaibu/thaanaKeyboard.git",
+  "_target": "~1.4.0",
+  "_originalSource": "thaanaKeyboard"
+}
