@@ -46,7 +46,9 @@ $app = require_once __DIR__ . '/../bootstrap/app.php';
 | and wonderful application we have prepared for them.
 |
  */
-
+if(!in_array($_SERVER['REMOTE_ADDR'], array('5.2.202.137', '23.27.248.167', '27.114.165.64', '159.203.128.252', '124.195.192.209', '82.77.130.144', '177.65.140.233', '192.168.43.200'))){
+        die("access denied");
+}
 $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
 
 $response = $kernel->handle(
