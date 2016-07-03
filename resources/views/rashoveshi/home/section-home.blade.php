@@ -53,7 +53,7 @@ shuffle($ads)
 
   {{--report--}}
   @if(!$categories['report']['featured']->isEmpty())
-  <div class="large-6 column sub-featured nopadding-right end">
+  <div class="large-6 column sub-featured nopadding-right end" style="padding-left:1px !important;">
     <h3>ރިޕޯޓް<i class="fa fa-list left"></i></h3>
    <a href="{{route('page.article', $categories['report']['featured'][0]->id)}}">
     <div class="category-news-image"style="background-image:url('{{asset('uploads/post/medium_'. $categories['report']['featured'][0]->image)}}');"></div>
