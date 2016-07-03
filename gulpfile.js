@@ -45,9 +45,12 @@ elixir(function(mix) {
     .copy('resources/bower_components/semantic-ui/dist/semantic.css','resources/assets/css/semantic.css')
     .copy('resources/bower_components/dropzone/dist/dropzone.css','resources/assets/css/dropzone.css')
     .copy('resources/bower_components/datetimepicker/jquery.datetimepicker.css','resources/assets/css/jquery.datetimepicker.css')
-    .copy('resources/bower_components/medium-editor/dist/css/medium-editor.css','resources/assets/css/medium-editor.css')
+    .copy('resources/bower_components/ckeditor/basic.conf.js', 'public/build/js/ckeditor/basic.conf.js')
+    .copy('resources/bower_components/ckeditor/smiley.conf.js', 'public/build/js/ckeditor/smiley.conf.js')
+    .copy('resources/bower_components/ckeditor/plugins/smiley', 'public/build/js/ckeditor/plugins/smiley')
+    /* .copy('resources/bower_components/medium-editor/dist/css/medium-editor.css','resources/assets/css/medium-editor.css')
     .copy('resources/bower_components/medium-editor/dist/css/themes/default.css','resources/assets/css/medium-default-theme.css')
-    .copy('resources/bower_components/medium-editor-insert-plugin/dist/css/medium-editor-insert-plugin.css','resources/assets/css/medium-editor-insert-plugin.css')
+    .copy('resources/bower_components/medium-editor-insert-plugin/dist/css/medium-editor-insert-plugin.css','resources/assets/css/medium-editor-insert-plugin.css')*/
     .copy('resources/bower_components/semantic-ui/dist/themes','public/build/css/themes')
 
     .styles([
@@ -67,8 +70,8 @@ elixir(function(mix) {
         "bower_components/jquery-placeholder/jquery.placeholder.js",
         "bower_components/dropzone/dist/dropzone.js",
         "bower_components/datetimepicker/jquery.datetimepicker.js",
-        "bower_components/medium-editor/dist/js/medium-editor.js",
-        /** MEDIUM INSERT PLUGIN */
+        /* "bower_components/medium-editor/dist/js/medium-editor.js",*/
+        /** MEDIUM INSERT PLUGIN 
         "bower_components/medium-editor/dist/js/medium-editor.js",
         "bower_components/handlebars/handlebars.runtime.min.js",
         "bower_components/jquery-sortable/source/js/jquery-sortable-min.js",
@@ -78,9 +81,9 @@ elixir(function(mix) {
         "bower_components/medium-editor-insert-plugin/dist/js/medium-editor-insert-plugin.js",
         "bower_components/thaanaKeyboard/jquery.thaana.js",
         "bower_components/masonry/dist/masonry.pkgd.min.js",
-        /** END OF MEDIUM INSERT PLUGIN */
+        END OF MEDIUM INSERT PLUGIN */
 
-        "assets/js/badha/medium-jtk.js",
+        /* "assets/js/badha/medium-jtk.js",*/
         "assets/js/badha/globals.js"
         ], 'public/js/badha-01.js',  paths.resourcesPath )
 

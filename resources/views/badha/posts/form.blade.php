@@ -89,14 +89,7 @@
 			</div>
 
 				<div class="field {{ $errors->first('content', ' error') }}">
-					<div class="editable">
-						@if(isset($post))
-							{!! $post->content !!}
-						@endif
-					</div>
-					{!! Form::textarea('content',null,['placeholder'=>'ކެޕްޝަން','class'=>'content', 'style'=>'display:none;']) !!}
-
-
+					{!! Form::textarea('content', null, ['placeholder'=>'ކެޕްޝަން', 'id' => 'editor']) !!}
 				</div>
 			</div>
 
@@ -232,6 +225,10 @@
 
 @section('scripts')
 <script>
+CKEDITOR.replace('editor', {
+    customConfig: '/build/js/ckeditor/basic.conf.js',
+});
+
         $.getScript('//platform.twitter.com/widgets.js', function(){
             var k = 0;
             var tweet = document.getElementById('twitter-widget-'+k);

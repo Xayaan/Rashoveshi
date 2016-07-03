@@ -1,23 +1,23 @@
 {
-  "name": "Rashoveshi",
+  "name": "rashoveshi",
   "version": "1.0.0",
   "homepage": "https://github.com/irshaam/rashoveshi",
   "authors": [
-  "Mohamed Irshaam <mohamed.irshaam@gmail.com>"
+    "Mohamed Irshaam <mohamed.irshaam@gmail.com>"
   ],
   "description": "news website for fuvahmulah",
   "main": "main.js",
   "keywords": [
-  "news"
+    "news"
   ],
   "license": "MIT",
   "ignore": [
-  "**/.*",
-  "node_modules",
-  "bower_components",
-  "resources/bower_components",
-  "test",
-  "tests"
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "resources/bower_components",
+    "test",
+    "tests"
   ],
   "dependencies": {
     "jquery": "~2.1.4",
@@ -31,5 +31,6 @@
     "medium-editor": "~5.12.0",
     "medium-editor-insert-plugin": "^2.1",
     "thaanaKeyboard": "~1.4.0",
+    "ckeditor": "^4.5.9"
   }
 }

@@ -14,7 +14,7 @@
 
 	<div class="row">
 	    <div class="large-12 columns">
-	        {!! Form::textarea('comment',null,['placeholder'=>'ޚިޔާލު ފާޅުކުރައްވާ','rows'=>'3','class'=>'atk comment-detail','required'=>'true']) !!}
+	        {!! Form::textarea('comment',null,['placeholder'=>'ޚިޔާލު ފާޅުކުރައްވާ','rows'=>'3','id' => 'comments1', 'class'=>'atk comment-detail','required'=>'true']) !!}
 	    </div>
 	</div>
 
@@ -58,22 +58,15 @@
 @endforeach
 @endif
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@section('scripts')
+<script>
+CKEDITOR.plugins.addExternal( 'smiley', '/build/js/ckeditor/plugins/smiley/', 'plugin.js' );
+CKEDITOR.replace('comments1', {
+    customConfig: '/build/js/ckeditor/smiley.conf.js',
+    extraPlugins: 'smiley',
+});
+</script>
+@stop
 
 @section('script')
 <script type="text/javascript">

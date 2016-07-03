@@ -20,6 +20,7 @@
 		</div>
 	</div>
 	{{-- @include('modules.footer') --}}
+    <script src="//cdn.ckeditor.com/4.5.9/standard/ckeditor.js"></script>
 	@yield('scripts')
 </body>
 </html>

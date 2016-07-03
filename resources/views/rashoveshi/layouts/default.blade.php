@@ -6,28 +6,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="csrf-token" content="{{ csrf_token() }}" />
-	<title><?=Meta::meta('title');?></title>
+	<title><?=Meta::get('title');?></title>
 
-	<?=Meta::tagMetaProperty('site_name', 'rashoveshi.mv');?>
-	<?=Meta::tagMetaProperty('site_name', 'rashoveshi.mv');?>
-	<?=Meta::tagMetaProperty('url');?>
-	<?=Meta::tagMetaProperty('locale', 'en_EN');?>
-	<?=Meta::tagMetaProperty('fb:app_id', '1766878270206798');?>
-	<?=Meta::tagMetaProperty('og:type', 'article');?>
+	<?=Meta::get('site_name', 'rashoveshi.mv');?>
+	<?=Meta::get('site_name', 'rashoveshi.mv');?>
+	<?=Meta::get('url');?>
+	<?=Meta::get('locale', 'en_EN');?>
+	<?=Meta::get('fb:app_id', '1766878270206798');?>
+	<?=Meta::get('og:type', 'article');?>
 
-	<?=Meta::tag('title');?>
-	<?=Meta::tag('description');?>
-	<?=Meta::tag('image');?>
-	<?=Meta::tag('url');?>
-	<?=Meta::tagMetaProperty('article:publisher', 'https://www.facebook.com/Rashoveshi-433216383537044');?>
+	<?=Meta::get('title');?>
+	<?=Meta::get('description');?>
+	<?=Meta::get('image')[0];?>
+	<?=Meta::get('url');?>
+	<?=Meta::get('article:publisher', 'https://www.facebook.com/Rashoveshi-433216383537044');?>
 
 	<meta content="@rashoveshi" data-page-subject="true" name="twitter:site" />
 	<meta content="@rashoveshi" data-page-subject="true" name="twitter:creator" />
 
-	<?=Meta::tagMetaProperty('twitter:domain', 'rashoveshi.mv');?>
-	<?=Meta::tagMetaProperty('twitter:widgets:csp', 'on');?>
-	<?=Meta::tagMetaProperty('twitter:card', 'summary_large_image');?>
-	<?=Meta::tagMetaProperty('twitter:image:src');?>
+	<?=Meta::get('twitter:domain', 'rashoveshi.mv');?>
+	<?=Meta::get('twitter:widgets:csp', 'on');?>
+	<?=Meta::get('twitter:card', 'summary_large_image');?>
+	<?=Meta::get('twitter:image:src');?>
 
 	<link rel="shortcut icon" type="image/x-icon" href="{{asset('/favicon.ico')}}">
 
@@ -85,6 +85,7 @@
 	@include('rashoveshi.modules.footer')
 	@show
 	<script src="{{ elixir("js/rashoveshi-01.js") }}"></script>
+    <script src="//cdn.ckeditor.com/4.5.9/standard/ckeditor.js"></script>
 	@yield('scripts')
 
 </body>
