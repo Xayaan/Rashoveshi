@@ -21,7 +21,9 @@
 		<div class="large-4 column left recents-popular nopadding-left show-for-large-up">
 			{{-- TABS --}}
 			@include('rashoveshi.home.recent-listing-home', $recentPosts)
+			@if($poll->count() > 0)
 			@include('rashoveshi.polls.latest-poll')
+            @endif
 		</div>
 	</div>
 </div>

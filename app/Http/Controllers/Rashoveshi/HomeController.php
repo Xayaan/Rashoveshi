@@ -47,10 +47,10 @@ class HomeController extends Controller {
 		// return $categories;
 
 		Meta::title('Rashoveshi.mv');
-		Meta::meta('description', 'rashoveshi');
-		Meta::meta('image', asset('images/social/rashoveshi-default.png'));
-		Meta::meta('twitter:image:src', asset('images/social/rashoveshi-default.png'));
-		Meta::meta('url', 'http://rashoveshi.mv');
+		Meta::set('description', 'rashoveshi');
+		Meta::set('image', asset('images/social/rashoveshi-default.png'));
+		Meta::set('twitter:image:src', asset('images/social/rashoveshi-default.png'));
+		Meta::set('url', 'http://rashoveshi.mv');
 
 		$featuredPosts = $this->layouts->orderBy('id', 'desc')->with('p_1', 'p_2', 'p_3', 'p_4', 'p_breaking', 'p_live', 'p_developing')->first();
 
@@ -70,7 +70,9 @@ class HomeController extends Controller {
 		$advs['middleads_4'] = $this->advs->position('home', 'middleads_4')->get()->toArray();
 		$advs['bottom'] = $this->advs->position('home', 'bottom')->get()->toArray();
 
-		return view('rashoveshi.pages.home', compact('featuredPosts', 'recentPosts', 'categories', 'advs', 'oldPosts'));
+        $poll = \App\Poll::all();
+
+		return view('rashoveshi.pages.home', compact('featuredPosts', 'recentPosts', 'categories', 'advs', 'oldPosts', 'poll'));
 	}
 
 }
