@@ -14,12 +14,18 @@ class Advs extends Model {
 		'name',
 		'page',
 		'position',
+        'target',
 		'desktop',
 		'mobile',
 		'status',
 	];
 
 	protected $dates = ['deleted_at'];
+
+    public function metrics()
+    {
+        return $this->hasMany('App\Metric');
+    }
 
 	public function scopePosition($query, $page, $position) {
 		$query->where('page', '=', $page)->where('position', '=', $position);
