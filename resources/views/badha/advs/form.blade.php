@@ -21,6 +21,14 @@
 				 </div>
 			</div>
 
+			<div class="field {{ $errors->first('targe', ' error') }}">
+				{!! Form::label('target','Target')!!}
+				<div class="one field">
+				    <div class="field">
+					    {!! Form::text('target', null,['placeholder'=>'http://target.com/?uta...']) !!}
+				    </div>
+				 </div>
+			</div>
 
 			<div class="field {{ $errors->first('position', ' error') }}">
 				{!! Form::label('position','Position')!!}

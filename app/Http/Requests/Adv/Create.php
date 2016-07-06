@@ -14,6 +14,7 @@ class Create extends Request {
 		return [
 			'name' => 'required',
 			'position' => 'required',
+            'target' => 'url',
 		];
 	}
 }

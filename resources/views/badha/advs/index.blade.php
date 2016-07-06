@@ -19,6 +19,7 @@
         <th>Position</th>
         <th>Desktop</th>
         <th>Mobile</th>
+        <th>Metrics <small>(clicks/impressions)</small></th>
   			<th>Actions</th>
   		</tr>
   	</thead>
@@ -31,7 +32,7 @@
         <td>{{$adv->position}}</td>
         <td>  <div class="" style=" height:50px; width:200px; background-size:100% 100%; background-image:url('{{ asset('uploads/adv/'. $adv->desktop)}}')"></div></td>
         <td> <div class="" style=" height:50px; width:50px; background-size:100% 100%; background-image:url('{{ asset('uploads/adv/'. $adv->mobile)}}')"></div></td>
-
+        <td>{{ number_format($adv->metrics()->ofType('click')->count()) }} / {{ number_format($adv->metrics()->ofType('impression')->count()) }}</td>
         @if(Request::is('posts') && Request::get('sort')==null)
             @if($currentUser->hasAccess('post.update'))
                 <td>
