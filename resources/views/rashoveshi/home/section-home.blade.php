@@ -10,7 +10,9 @@
 $ads = $advs['middleads_1'];
 shuffle($ads)
 ?>
-<div class="hide-for-small large-6 column middle-subad nopadding-right text-right"><img src="{{asset('uploads/adv/' . $ads[0]['desktop'] )}}"></div>
+<div class="hide-for-small large-6 column middle-subad nopadding-right text-right">
+    <a href="{{ $ads[0]['target'] }}" target="_blank"><img src="{{asset('uploads/adv/' . $ads[0]['desktop'] )}}"></a>
+</div>
 @endif
 
 
@@ -22,7 +24,9 @@ shuffle($ads)
 $ads = $advs['middleads_2'];
 shuffle($ads)
 ?>
-<div class="hide-for-small large-6 column middle-subad nopadding-right text-right"><img src="{{asset('uploads/adv/' . $ads[0]['desktop'] )}}"></div>
+<div class="hide-for-small large-6 column middle-subad nopadding-right text-right">
+    <a href="{{ $ads[0]['target'] }}" target="_blank"><img src="{{asset('uploads/adv/' . $ads[0]['desktop'] )}}"></a>
+</div>
 @endif
 
 
@@ -40,7 +44,9 @@ shuffle($ads)
 $ads = $advs['middleads_1'];
 shuffle($ads)
 ?>
-<div class="large-12 column middle-subad text-right" style="padding:20px;"><img src="{{asset('uploads/adv/' . $ads[0]['mobile'] )}}"></div>
+<div class="large-12 column middle-subad text-right" style="padding:20px;">
+    <a href="{{ $ads[0]['target'] }}" target="_blank"><img src="{{asset('uploads/adv/' . $ads[0]['mobile'] )}}"></a>
+</div>
 @endif
 
 </div>
@@ -65,7 +71,7 @@ shuffle($ads)
      @foreach($categories['report']['subs'] as $post)
      <li>
       <a href="{{route('page.article', $post->id)}}" class="right large-3 nopadding column ssiiw">
-        <div class="ssii" style="background-image:url('{{asset('uploads/post/squareMedium_'.$post->image)}}');"></div>
+        <div class="ssii" style="background-image:url('{{asset('uploads/post/squareMedium_'.$post->image)}}'); height:100%;"></div>
      </a>
      <a href="#" class="right ssiil large-9 nopadding-left column">{{$post->heading}}<br>
         <abbr class="timeago" title="{{$post->published_at}}"></abbr>
@@ -92,7 +98,7 @@ shuffle($ads)
     @foreach($categories['business']['subs'] as $post)
     <li>
      <a href="{{route('page.article', $post->id)}}" class="right large-3 nopadding column ssiiw">
-       <div class="ssii" style="background-image:url('{{asset('uploads/post/squareMedium_'.$post->image)}}');"></div>
+       <div class="ssii" style="background-image:url('{{asset('uploads/post/squareMedium_'.$post->image)}}'); height:100%;"></div>
     </a>
     <a href="#" class="right ssiil large-9 nopadding-left column">{{$post->heading}}<br>
        <abbr class="timeago" title="{{$post->published_at}}"></abbr>
@@ -118,7 +124,9 @@ shuffle($ads)
 $ads = $advs['middleads_2'];
 shuffle($ads)
 ?>
-<div class="large-12 column middle-subad text-right" style="padding:20px;"><img src="{{asset('uploads/adv/' . $ads[0]['mobile'] )}}"></div>
+<div class="large-12 column middle-subad text-right" style="padding:20px;">
+    <a href="{{ $ads[0]['target'] }}" target="_blank"><img src="{{asset('uploads/adv/' . $ads[0]['mobile'] )}}"></a>
+</div>
 @endif
 
 </div>
@@ -140,7 +148,7 @@ shuffle($ads)
    @foreach($categories['sports']['subs'] as $post)
    <li>
     <a href="{{route('page.article', $post->id)}}" class="right large-3 nopadding column ssiiw">
-      <div class="ssii" style="background-image:url('{{asset('uploads/post/squareMedium_'.$post->image)}}');"></div>
+      <div class="ssii" style="background-image:url('{{asset('uploads/post/squareMedium_'.$post->image)}}'); height:100%;"></div>
    </a>
    <a href="#" class="right ssiil large-9 nopadding-left column">{{$post->heading}}<br>
       <abbr class="timeago" title="{{$post->published_at}}"></abbr>
@@ -168,7 +176,7 @@ shuffle($ads)
    @foreach($categories['politics']['subs'] as $post)
    <li>
     <a href="{{route('page.article', $post->id)}}" class="right large-3 nopadding column ssiiw">
-      <div class="ssii" style="background-image:url('{{asset('uploads/post/squareMedium_'.$post->image)}}');"></div>
+      <div class="ssii" style="background-image:url('{{asset('uploads/post/squareMedium_'.$post->image)}}'); height:100%;"></div>
    </a>
    <a href="#" class="right ssiil large-9 nopadding-left column">{{$post->heading}}<br>
       <abbr class="timeago" title="{{$post->published_at}}"></abbr>
@@ -192,7 +200,9 @@ shuffle($ads)
 $ads = $advs['middleads_3'];
 shuffle($ads)
 ?>
-<div class="large-12 column middle-subad text-right" style="padding:20px;"><img src="{{asset('uploads/adv/' . $ads[0]['mobile'] )}}"></div>
+<div class="large-12 column middle-subad text-right" style="padding:20px;">
+    <a href="{{ $ads[0]['target'] }}" target="_blank"><img src="{{asset('uploads/adv/' . $ads[0]['mobile'] )}}"></a>
+</div>
 @endif
 
 </div>
@@ -213,7 +223,7 @@ shuffle($ads)
    @foreach($categories['environment']['subs'] as $post)
    <li>
     <a href="{{route('page.article', $post->id)}}" class="right large-3 nopadding column ssiiw">
-      <div class="ssii" style="background-image:url('{{asset('uploads/post/squareMedium_'.$post->image)}}');"></div>
+      <div class="ssii" style="background-image:url('{{asset('uploads/post/squareMedium_'.$post->image)}}'); height:100%;"></div>
    </a>
    <a href="#" class="right ssiil large-9 nopadding-left column">{{$post->heading}}<br>
       <abbr class="timeago" title="{{$post->published_at}}"></abbr>
@@ -241,7 +251,7 @@ shuffle($ads)
    @foreach($categories['school']['subs'] as $post)
    <li>
     <a href="{{route('page.article', $post->id)}}" class="right large-3 nopadding column ssiiw">
-      <div class="ssii" style="background-image:url('{{asset('uploads/post/squareMedium_'.$post->image)}}');"></div>
+      <div class="ssii" style="background-image:url('{{asset('uploads/post/squareMedium_'.$post->image)}}'); height:100%;"></div>
    </a>
    <a href="#" class="right ssiil large-9 nopadding-left column">{{$post->heading}}<br>
       <abbr class="timeago" title="{{$post->published_at}}"></abbr>
@@ -270,7 +280,9 @@ shuffle($ads)
 $ads = $advs['middleads_3'];
 shuffle($ads)
 ?>
-<div class="hide-for-small large-6 column middle-subad nopadding-right text-right"><img src="{{asset('uploads/adv/' . $ads[0]['desktop'] )}}"></div>
+<div class="hide-for-small large-6 column middle-subad nopadding-right text-right">
+    <a href="{{ $ads[0]['target'] }}" target="_blank"><img src="{{asset('uploads/adv/' . $ads[0]['desktop'] )}}"></a>
+</div>
 @endif
 
 
@@ -282,7 +294,9 @@ shuffle($ads)
 $ads = $advs['middleads_4'];
 shuffle($ads)
 ?>
-<div class="hide-for-small large-6 column middle-subad nopadding-right text-right"><img src="{{asset('uploads/adv/' . $ads[0]['desktop'] )}}"></div>
+<div class="hide-for-small large-6 column middle-subad nopadding-right text-right">
+    <a href="{{ $ads[0]['target'] }}" target="_blank"><img src="{{asset('uploads/adv/' . $ads[0]['desktop'] )}}"></a>
+</div>
 @endif
 
 
@@ -300,7 +314,9 @@ shuffle($ads)
 $ads = $advs['middleads_1'];
 shuffle($ads)
 ?>
-<div class="large-12 column middle-subad text-right" style="padding:20px;"><img src="{{asset('uploads/adv/' . $ads[0]['mobile'] )}}"></div>
+<div class="large-12 column middle-subad text-right" style="padding:20px;">
+    <a href="{{ $ads[0]['target'] }}" target="_blank"><img src="{{asset('uploads/adv/' . $ads[0]['mobile'] )}}"></a>
+</div>
 @endif
 
 </div>
@@ -341,10 +357,14 @@ shuffle($ads)
    @else
 <?php
 $ads = $advs['bottom'];
-shuffle($ads)
+shuffle($ads);
 ?>
-    <img class="hide-for-small show-for-medium " src="{{asset('uploads/adv/' . $ads[0]['desktop'])}}">
-    <img class="hide-for-medium hide-form-large show-for-only-small " src="{{asset('uploads/adv/' . $ads[0]['mobile'])}}">
+    <a href="{{ $ads[0]['target'] }}" target="_blank">
+        <img class="hide-for-small show-for-medium " src="{{asset('uploads/adv/' . $ads[0]['desktop'])}}">
+    </a>
+    <a href="{{ $ads[0]['target'] }}" target="_blank">
+        <img class="hide-for-medium hide-form-large show-for-only-small " src="{{asset('uploads/adv/' . $ads[0]['mobile'])}}">
+    </a>
 
 
 

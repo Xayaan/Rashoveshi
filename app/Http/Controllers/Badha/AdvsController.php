@@ -50,6 +50,7 @@ class AdvsController extends AuthorizedController {
 		$adv->name = $request->name;
 		$adv->page = $position[0];
 		$adv->position = $position[1];
+        $adv->target = $request->target;
 		$adv->mobile = $request->mobile;
 		$adv->desktop = $request->desktop;
 
@@ -75,11 +76,9 @@ class AdvsController extends AuthorizedController {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function edit($id) {
-		if ($adv = $this->advs->find($id)) {
+        $adv = $this->advs->find($id);
 
-			return view('badha.advs.form', compact('adv'));
-
-		}
+        return view('badha.advs.form', compact('adv'));
 	}
 
 	/**
@@ -98,6 +97,7 @@ class AdvsController extends AuthorizedController {
 			$adv->name = $request->name;
 			$adv->page = $position[0];
 			$adv->position = $position[1];
+            $adv->target = $request->target;
 			$adv->mobile = $request->mobile;
 			$adv->desktop = $request->desktop;
 
