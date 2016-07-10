@@ -89,7 +89,7 @@
 			</div>
 
 				<div class="field {{ $errors->first('content', ' error') }}">
-					{!! Form::textarea('content', null, ['placeholder'=>'ކެޕްޝަން', 'id' => 'editor']) !!}
+					{!! Form::textarea('content', null, ['placeholder'=>'ކެޕްޝަން', 'id' => 'editor', 'class' => 'thaana']) !!}
 				</div>
 			</div>
 
@@ -225,9 +225,11 @@
 
 @section('scripts')
 <script>
-CKEDITOR.replace('editor', {
+/*CKEDITOR.replace('editor', {
     customConfig: '/build/js/ckeditor/basic.conf.js',
-});
+});*/
+
+//$('#editor').redactor();
 
         $.getScript('//platform.twitter.com/widgets.js', function(){
             var k = 0;
