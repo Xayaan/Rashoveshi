@@ -85,7 +85,7 @@
 	@include('rashoveshi.modules.footer')
 	@show
 	<script src="{{ elixir("js/rashoveshi-01.js") }}"></script>
-    <script src="//cdn.ckeditor.com/4.5.9/standard/ckeditor.js"></script>
+    <script src="/build/js/plugins/ckeditor/ckeditor.js"></script>
 	@yield('scripts')
 
 </body>

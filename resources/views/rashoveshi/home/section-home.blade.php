@@ -59,7 +59,7 @@ shuffle($ads)
 
   {{--report--}}
   @if(!$categories['report']['featured']->isEmpty())
-  <div class="large-6 column sub-featured nopadding-right end" style="padding-left:1px !important;">
+  <div class="large-6 medium-6 column sub-featured nopadding-right end" style="padding-left:1px !important;">
     <h3>ރިޕޯޓް<i class="fa fa-list left"></i></h3>
    <a href="{{route('page.article', $categories['report']['featured'][0]->id)}}">
     <div class="category-news-image"style="background-image:url('{{asset('uploads/post/medium_'. $categories['report']['featured'][0]->image)}}');"></div>
@@ -86,7 +86,7 @@ shuffle($ads)
 @endif
 {{--BUSINESS--}}
 @if(!$categories['business']['featured']->isEmpty())
-<div class="large-6 column sub-featured nopadding-right end">
+<div class="large-6 medium-6 column sub-featured nopadding-right end">
    <h3> ވިޔަފާރި <i class="fa fa-line-chart left"></i></h3>
   <a href="{{route('page.article', $categories['business']['featured'][0]->id)}}">
    <div class="category-news-image"style="background-image:url('{{asset('uploads/post/medium_'. $categories['business']['featured'][0]->image)}}');"></div>
@@ -118,7 +118,7 @@ shuffle($ads)
 
 <!-- Mid3 -->
 @if(empty($advs['middleads_2']))
-<div class="large-12 column middle-subad nopadding-right text-right"><img src="{{asset('images/ads/bottomad.png')}}"></div>
+<div class="large-12 medium-6 column middle-subad nopadding-right text-right"><img src="{{asset('images/ads/bottomad.png')}}"></div>
 @else
 <?php
 $ads = $advs['middleads_2'];
@@ -136,7 +136,7 @@ shuffle($ads)
 
 {{--sports--}}
 @if(!$categories['sports']['featured']->isEmpty())
-<div class="large-6 column sub-featured nopadding-right end">
+<div class="large-6 medium-6 column sub-featured nopadding-right end">
  <h3> ކުޅިވަރު <i class="fa fa-futbol-o left"></i></h3>
  <a href="{{route('page.article', $categories['sports']['featured'][0]->id)}}">
   <div class="category-news-image"style="background-image:url('{{asset('uploads/post/medium_'. $categories['sports']['featured'][0]->image)}}');"></div>
@@ -164,7 +164,7 @@ shuffle($ads)
 
 {{--politics--}}
 @if(!$categories['politics']['featured']->isEmpty())
-<div class="large-6 column sub-featured nopadding-right end">
+<div class="large-6 medium-6 column sub-featured nopadding-right end">
  <h3>ސިޔާސީ<i class="fa fa-globe left"></i></h3>
  <a href="{{route('page.article', $categories['politics']['featured'][0]->id)}}">
   <div class="category-news-image"style="background-image:url('{{asset('uploads/post/medium_'. $categories['politics']['featured'][0]->image)}}');"></div>
@@ -211,7 +211,7 @@ shuffle($ads)
 
 {{--environment--}}
 @if(!$categories['environment']['featured']->isEmpty())
-<div class="large-6 column sub-featured nopadding-right end">
+<div class="large-6 medium-6 column sub-featured nopadding-right end">
  <h3> ތިމާވެށި <i class="fa fa-leaf left"></i></h3>
  <a href="{{route('page.article', $categories['environment']['featured'][0]->id)}}">
   <div class="category-news-image"style="background-image:url('{{asset('uploads/post/medium_'. $categories['environment']['featured'][0]->image)}}');"></div>
@@ -239,7 +239,7 @@ shuffle($ads)
 
 {{--environment--}}
 @if(!$categories['school']['featured']->isEmpty())
-<div class="large-6 column sub-featured nopadding-right end">
+<div class="large-6 medium-6 column sub-featured nopadding-right end">
 <h3> ސްކޫލް <i class="fa fa-book left"></i></h3>
  <a href="{{route('page.article', $categories['school']['featured'][0]->id)}}">
   <div class="category-news-image"style="background-image:url('{{asset('uploads/post/medium_'. $categories['school']['featured'][0]->image)}}');"></div>
@@ -341,12 +341,12 @@ shuffle($ads)
 <div class="clearfix"></div>
 <div class="low-section">
  <div class="row">
-  <div class="large-8 columns-main column nopadding-right right">
+  <div class="large-8 column nright">
     {{-- COLUMNIST --}}
     @include('rashoveshi.home.columnist-home', $categories['column'])
     {{-- END OF COLUMNIST --}}
  </div>
- <div class="large-4 column nopadding-right bottom-ad">
+ <div class="large-4 column bottom-ad">
   {{-- ADV --}}
 
 
