@@ -47,6 +47,7 @@
 </div>
 @endif
 
+
 <div class="top-article-ads">
 <!--  <div class="top-article-ad-image" style="background-image:url('images/ads/article-inads.png')"></div>
  -->
@@ -72,6 +73,7 @@ shuffle($ads)
 </div>
 
 {{-- Article Main --}}
+<p>{{ $post->content }}</p>
 @if($post->content_text !== '')
 <?php $content = json_decode($post->content_text);?>
 
