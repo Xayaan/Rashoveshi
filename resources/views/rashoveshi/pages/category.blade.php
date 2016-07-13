@@ -7,10 +7,10 @@
       ރަށޮވެށިއަށް ޚަބަރެއް ދެއްވުމަށް: 7422233 / 9572233
     </div>
     <div class="clearfix"></div>
-    
+
     <div class="large-8 medium-12 column right nopadding-right">
       {{-- Featured --}}
-      {{-- @include('rashoveshi.tags.featured', $posts['posts']) --}}
+      @include('rashoveshi.tags.featured', $posts['posts'])
     </div>
 
     {{-- Recent and Populars --}}
@@ -24,7 +24,7 @@
 
 
 
-<!-- 
+<!--
 <div class="home-sectionals">
   <div class="row">
     <div class="large-6 column middle-subad nopadding-right"><img src="images/stoAd.gif"></div>
