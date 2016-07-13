@@ -60,11 +60,13 @@
 
 @section('scripts')
 <script>
+/*
 CKEDITOR.plugins.addExternal( 'smiley', '/build/js/ckeditor/plugins/smiley/', 'plugin.js' );
 CKEDITOR.replace('comments1', {
     customConfig: '/build/js/ckeditor/smiley.conf.js',
     extraPlugins: 'smiley',
 });
+ */
 </script>
 @stop
 
